@@ -4,8 +4,8 @@
 
 
 
-void obsluga(int nr){
-	printf("Potomek sie zakonczyl\n");
+void obsluga(int signall){
+	printf("Potomek sie zakonczyl, sygnal %d\n", signall);
 }
 
 int main(){
@@ -21,6 +21,7 @@ int main(){
 			printf("Proces potomny o pidzie %d z rodzica %d\n",getpid(),getppid());
 			exit(1);
 		} else {
+			sleep(2);
 			printf("Proces macierzysty o pidzie %d i dziecku %d\n",getpid(),childpid);
 		}
 	}

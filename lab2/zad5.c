@@ -4,8 +4,8 @@
 
 
 int main(){
-	int cpid,
-	int	status, 
+	int cpid;
+	int	status; 
 	int i; 
 	
 	for(i = 0; i < 5; i++){

@@ -9,20 +9,20 @@ void obsluga(int signall){
 }
 
 int main(){
-	int childpid;
+	int cpid;
 	int	status;
 	int i; 
 	
 	signal(SIGCHLD, obsluga);
 
 	for(i = 0; i < 5; i++){
-		if ((childpid = fork()) == -1){exit(1);
-		else if (childpid == 0){
+		if ((cdpid = fork()) == -1) exit(1);
+		else if (cpid == 0){
 			printf("Proces potomny o pidzie %d z rodzica %d\n",getpid(),getppid());
 			exit(1);
 		} else {
 			sleep(2);
-			printf("Proces macierzysty o pidzie %d i dziecku %d\n",getpid(),childpid);
+			printf("Proces macierzysty o pidzie %d i dziecku %d\n",getpid(),cpid);
 		}
 	}
 
